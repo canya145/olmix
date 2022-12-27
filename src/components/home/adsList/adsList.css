@@ -1,0 +1,11 @@
+.ads-row{
+    display: flex !important;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+h3{
+    display: flex;
+    justify-content: center;
+}

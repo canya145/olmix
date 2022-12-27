@@ -1,0 +1,39 @@
+.details{
+  display: flex;
+  flex-direction: column;
+  padding: 3%;
+}
+
+.details h3{
+  margin-top: 2.1rem;
+  font-size: 1.5rem;
+}
+
+.details-page{
+  display: flex;
+  flex-direction: row;
+}
+
+.details-page .detailsImg{
+  flex: 2;
+}
+
+.details-page .detailsImg img{
+  width: 70%;
+}
+
+.details-page .details-information{
+  flex: 3;
+}
+
+.details-page .details-information h2{
+  font-size: 2.3rem;
+  margin-top: 0;
+}
+.details-page .details-information p{
+  font-size: 1.2rem;
+  margin: 3% 0;
+}
+.details-page .details-information span{
+  font-size: 1.1rem;
+}

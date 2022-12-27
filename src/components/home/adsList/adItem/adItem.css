@@ -1,0 +1,86 @@
+.card-ad{
+    max-width: 15%;
+    margin: 3% 0 3% 4%;
+    position:relative;
+    -webkit-box-shadow: 0px 0px 18px 9px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 18px 9px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 18px 9px rgba(0,0,0,0.75);
+    background-color: rgba(0,0,0,0.7);
+    border-radius: 0.8rem;
+}
+
+div.card-ad span{
+    display: block;
+    padding-bottom: 5%;
+}
+
+.card-ad .modalWindow{
+    position: absolute;
+    z-index: 2;
+}
+
+.card-ad .ad-photo img{
+    width: 100%;
+}
+
+.card-ad .ad-photo .adInfo{
+    position:absolute;
+    left:0;
+    bottom:1%;
+    right:0;
+    top:0;
+    background: rgba(29, 29, 29, 0.8);
+    display:none;
+    color: white;
+}
+
+.card-ad .ad-photo:hover .adInfo{
+    display: block;
+}
+
+.card-ad .ad-photo:hover{
+    transform: scale(1.05);
+    transition-duration: 0.4s;
+}
+
+.card-ad .ad-photo:hover img{
+    filter: blur(1px);
+}
+
+.card-ad{
+    cursor: pointer;
+}
+
+.card-ad .ad-photo .adInfo .rating{
+    position: relative;
+    background: #5b5b5b;
+    width: 75%;
+    height: 2%;
+    margin-top: 1%;
+    margin-left: 5%;
+    border-radius: 1rem;
+}
+
+.card-ad .ad-photo .adInfo .rating .rating-item{
+    width: 70%;
+    height: 100%;
+    background: #878787;
+    border-radius: 1rem;
+}
+
+.card-ad .ad-photo .adInfo p:first-child{
+    margin-top: 93%;
+}
+
+.card-ad .ad-photo .adInfo p{
+    margin-left: 5%;
+    font-size: 1.3rem;
+    margin-bottom: 0;
+    margin-top: 5%;
+}
+
+.card-ad .ad-title h4{
+    margin-left: 4%;
+    font-size: 0.9rem;
+    font-style: normal;
+}
