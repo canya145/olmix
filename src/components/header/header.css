@@ -1,0 +1,60 @@
+.headerSection{
+    -webkit-box-shadow: 0px 11px 12px -1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 11px 12px -1px rgba(0,0,0,0.75);
+    box-shadow: 0px 11px 12px -1px rgba(0,0,0,0.75);
+    height: 105px;
+    background-image: url("../../images/headerBg.jpg");
+}
+
+.headerSection h2,h3{
+    margin-top: 1.5rem;
+}
+
+.headerSection h3 a{
+    color: white;
+    text-decoration: none;
+}
+.headerSection h2 a{
+    color: white;
+    text-decoration: none;
+}
+.headerSection {
+    display: flex;
+    flex-direction: row;
+}
+.headerSection .headerTitle{
+    display: flex;
+    align-items: center;
+}
+
+.headerSection .headerTitle h1{
+    text-transform: uppercase;
+}
+
+.headerSection .logo{
+    display: flex;
+    align-items: center;
+}
+
+.headerSection .auth{
+    display: flex;
+    align-items: center;
+}
+
+.headerSection .auth img{
+    border-radius: 50%;
+}
+
+.headerSection .logout button{
+    background: none;
+    color: white;
+    padding: 0.7rem 1.2rem;
+    border: 1px solid white;
+}
+.headerSection .logout button:hover{
+    background: white;
+    color: black;
+    transition: 0.5s;
+    transform: scale(1.1);
+    cursor: pointer;
+}
