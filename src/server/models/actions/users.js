@@ -1,5 +1,6 @@
 const uuid = require('node-uuid');
 const randomstring = require('randomstring');
+const crypto = require('crypto');
 const User = require('../redis/user');
 
 const register = function (session, email, password) {
@@ -33,6 +34,31 @@ const register = function (session, email, password) {
     });
 };
 
+const login = function (session, email, password) {
+  return session
+    .query('MATCH (user:User {email: $email}) RETURN user', {email})
+    .then((foundedUser) => {
+      if (!foundedUser.hasNext()) {
+        throw {email: 'username does not exist', status: 400};
+      } else {
+        while (foundedUser.hasNext()) {
+          const record = foundedUser.next();
+          const dbUser = record.get('user').properties;
+          if (dbUser.password !== hashPassword(email, password)) {
+            throw {password: 'wrong password', status: 400};
+          }
+          return {token: dbUser.api_key, user: new User(record.get('user'))};
+        }
+      }
+    });
+};
+
+function hashPassword(username, password) {
+  const s = `${username}:${password}`;
+  return crypto.createHash('sha256').update(s).digest('hex');
+}
+
 module.exports = {
   register,
+  login,
 };

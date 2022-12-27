@@ -13,6 +13,7 @@ export const Routers = () => {
         <Switch>
             <Route path={'/'} exact component={Home}/>
             <Route path={`/registration`} component={Registration}/>
+            <Route path={`/login`} component={Login}/>
             <Route component={Error}/>
         </Switch>
     );
