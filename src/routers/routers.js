@@ -14,6 +14,7 @@ export const Routers = () => {
             <Route path={'/'} exact component={Home}/>
             <Route path={`/registration`} component={Registration}/>
             <Route path={`/login`} component={Login}/>
+            <Route path={`/ads/:id`} exact component={DetailsOfAd} />
             <Route component={Error}/>
         </Switch>
     );
